@@ -1,0 +1,15 @@
+@keyframes upperFlow{
+   0%{
+      transform: translatey(100px);
+      /* background: red; */
+   } 
+    100%{
+      /* background: blue; */
+
+      transform: translatey(0px);
+   } 
+}
+.anime-div{
+ 
+      animation: upperFlow 2s 1 alternate; 
+}
