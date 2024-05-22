@@ -17,12 +17,12 @@ const Staff = ({ showSlide1 }) => {
       <div className="flex flex-col  items-center justify-center dark:bg-zinc-800 text-zinc-800 dark:text-zinc-200 pt-4 device-screen mb-4">
         <div className="flex flex-col items-center justify-center w-full ">
           <div className="heading relative  flex justify-center mb-4">
-            <h2 className="text-4xl text-center font-bold mb-4 text-teal-500 font-serif">
+            <h2 className="text-2xl sm:text-4xl text-center font-bold mb-4 text-teal-500 font-serif">
               Full Time Staff
             </h2>
             <span className="bg-orange-400 w-16 h-1 absolute rounded-full bottom-0"></span>
           </div>
-          <p className="text-center text-md font-serif text-gray-500 mb-12  md:w-[40%] ">
+          <p className="text-center text-md font-serif text-gray-500 mb-12  w-[80%]  md:w-[40%] ">
             Far far away, behind the word mountains, far from the countries
             Vokalia and Consonantia, there live the blind texts.
           </p>
@@ -59,7 +59,7 @@ const StaffMember = ({ name, role, imageUrl, bio }) => {
         alt={name}
         className="rounded-full mb-4 h-[150px] w-[150px]"
       />
-      <h3 className="text-xl font-semibold">{name}</h3>
+      <h3 className="text-xl font-semibold text-center">{name}</h3>
       <p className="text-zinc-600 ">{role}</p>
       <p className="text-sm my-4 text-center w-[80%] md:w-full">{bio}</p>
       <div className="flex justify-center space-x-4">

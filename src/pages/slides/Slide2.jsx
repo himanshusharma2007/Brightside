@@ -11,10 +11,10 @@ const Slide2 = () => {
     <div>
       <div className="offer-section py-16">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col -mt-32 md:flex-row items-center mb-12 justify-between">
+          <div className="flex flex-col -mt-32 lg:flex-row items-center mb-12 justify-between w-full">
             <div
               id="target"
-              className="offer-box slide-in max-w-[350px] z-10 bg-green-500 flex justify-center items-center text-white p-4 h-64 rounded-md mr-0 md:mr-10 mb-4 md:mb-0 lg:min-h-[300px] shadow-md"
+              className="offer-box slide-in max-w-[350px] z-10 bg-green-500 flex justify-center items-center text-white p-4 h-[256px] rounded-lg mr-0 lg:mr-10 mb-4 lg:mb-0 lg:min-h-[300px] shadow-lg"
             >
               <div className="contant">
                 <h3 className="offer-title text-2xl font-bold mb-2">
@@ -27,7 +27,7 @@ const Slide2 = () => {
                 </p>
               </div>
             </div>
-            <div className="offer-box slide-in max-w-[350px] z-10 bg-orange-500 flex justify-center items-center text-white p-4 h-64 rounded-md mr-0 md:mr-10 mb-4 md:mb-0 lg:min-h-[300px] shadow-md">
+            <div className="offer-box slide-in max-w-[350px] z-10 bg-orange-500 flex justify-center items-center text-white p-4 h-[256px] rounded-lg mr-0 lg:mr-10 mb-4 lg:mb-0 lg:min-h-[300px] shadow-lg">
               <div className="contant">
                 <h3 className="offer-title text-2xl font-bold mb-2">
                   Summer Camp
@@ -39,7 +39,7 @@ const Slide2 = () => {
                 </p>
               </div>
             </div>
-            <div className="offer-box slide-in max-w-[350px] z-10 bg-blue-500 flex justify-center items-center text-white p-4 h-64 rounded-md mr-0 md:mr-10 mb-4 md:mb-0 lg:min-h-[300px] shadow-md">
+            <div className="offer-box slide-in max-w-[350px] z-10 bg-blue-500 flex justify-center items-center text-white p-4 h-[256px] rounded-lg mr-0 lg:mr-10 mb-4 lg:mb-0 lg:min-h-[300px] shadow-lg">
               <div className="contant">
                 <h3 className="offer-title text-2xl font-bold mb-2">
                   After School Programs

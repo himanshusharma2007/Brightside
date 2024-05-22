@@ -173,8 +173,8 @@ const Contact = ({ showSlide1 }) => {
               </div>
             </div>
           </div>
-          <div className="device-screen relative flex flex-col md:flex-row md:space-x-16   h-auto p-4  w-full">
-            <div className=" testimonials mt-12  py-3 flex flex-col  w-full  md:w-1/2 md:max-h-full ">
+          <div className="device-screen relative flex flex-col lg:flex-row lg:space-x-16   h-auto p-4  w-full">
+            <div className=" testimonials mt-12  py-3 flex flex-col  w-full  md:max-h-full ">
               <h2 className="text-3xl font-medium mb-4 text-teal-400">
                 Testimonials
               </h2>
@@ -202,8 +202,8 @@ const Contact = ({ showSlide1 }) => {
                   </blockquote>
                 </div>
               </div>
-            </div>
-            <div className="expendable-list mt-12 device-screen w-full md:w-1/2 bg-gray-100 flex  flex-col justify-center px-5   py-3 shadow-lg">
+            </div>  
+            <div className="expendable-list mt-12 device-screen w-full  bg-gray-100 flex  flex-col justify-center px-5   py-3 shadow-lg">
               <div className="main min-h-full">
                 <h2 className="text-3xl font-medium mb-2 text-teal-400">
                   Why Choose Us

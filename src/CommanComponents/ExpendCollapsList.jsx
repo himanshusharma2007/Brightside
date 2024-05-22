@@ -15,26 +15,32 @@ const ExpendCollapsList = () => {
   };
 
   return (
-    <div className="bottom flex flex-col space-y-2">
+    <div className="bottom flex flex-col space-y-3">
       <button
         className="btn w-full h-10 flex items-center px-2"
         onClick={() => handleSectionToggle(0)}
       >
         <div
-          className={`first flex w-full justify-left pl-3 h-10 font-medium items-center space-x-5 ${
+          className={`first flex w-full justify-left pl-3  h-10 font-medium items-center space-x-2 sm:space-x-5 ${
             openSection === 0 ? "bg-teal-500 text-white" : ""
           }`}
         >
           <div className="pluseLogo">
             {openSection === 0 ? <PiMinusBold /> : <BiPlusMedical />}
           </div>
-          <div className="text">YOUR CHILDRENS ARE SAFE WITH US</div>
+          <div className="text text-[13px] sm:text-[18px] w-full">
+            YOUR CHILDRENS ARE SAFE WITH US
+          </div>
         </div>
       </button>
       {openSection === 0 && (
         <div className="sections-contant">
-          <div className="flex flex-col md:flex-row mt-5 px-4">
-            <img src={StdImg1} alt="Kids" className=" w-40 h-40 mr-4" />
+          <div className="flex flex-col md:flex-row mt-5 px-4 ">
+            <img
+              src={StdImg1}
+              alt="Kids"
+              className=" w-full sm:w-40 h-40 mr-4"
+            />
             <p className="text-[22px]">
               Far far away, behind the word mountains, far from the countries
               Vokalia and Consonantia, there live the blind texts. Separated
@@ -56,13 +62,19 @@ const ExpendCollapsList = () => {
           <div className="pluseLogo">
             {openSection === 1 ? <PiMinusBold /> : <BiPlusMedical />}
           </div>
-          <div className="text">YOUR CHILDRENS ARE SAFE WITH US</div>
+          <div className="text text-[13px] sm:text-[18px]">
+            YOUR CHILDRENS ARE SAFE WITH US
+          </div>
         </div>
       </button>
       {openSection === 1 && (
         <div className="sections-contant">
           <div className="flex flex-col md:flex-row mt-5 px-4">
-            <img src={StdImg2} alt="Kids" className=" w-40 h-40 mr-4" />
+            <img
+              src={StdImg2}
+              alt="Kids"
+              className=" w-full sm:w-40 h-40 mr-4"
+            />
             <p className="text-[22px]">
               Far far away, behind the word mountains, far from the countries
               Vokalia and Consonantia, there live the blind texts. Separated
@@ -84,13 +96,19 @@ const ExpendCollapsList = () => {
           <div className="pluseLogo">
             {openSection === 2 ? <PiMinusBold /> : <BiPlusMedical />}
           </div>
-          <div className="text">YOUR CHILDRENS ARE SAFE WITH US</div>
+          <div className="text text-[13px] sm:text-[18px]">
+            YOUR CHILDRENS ARE SAFE WITH US
+          </div>
         </div>
       </button>
       {openSection === 2 && (
         <div className="sections-contant">
           <div className="flex flex-col md:flex-row mt-5 px-4">
-            <img src={StdImg3} alt="Kids" className=" w-40 h-40 mr-4" />
+            <img
+              src={StdImg3}
+              alt="Kids"
+              className=" w-full sm:w-40 h-40 mr-4"
+            />
             <p className="text-[22px]">
               Far far away, behind the word mountains, far from the countries
               Vokalia and Consonantia, there live the blind texts. Separated
