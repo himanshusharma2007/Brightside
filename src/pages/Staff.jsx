@@ -14,7 +14,7 @@ const Staff = ({ showSlide1 }) => {
           live the blind texts."
         />
       )}
-      <div className="flex flex-col  items-center justify-center dark:bg-zinc-800 text-zinc-800 dark:text-zinc-200 pt-4 device-screen mb-4">
+      <div className="flex flex-col  items-center justify-center  text-zinc-800  pt-4 device-screen mb-4 ">
         <div className="flex flex-col items-center justify-center w-full ">
           <div className="heading relative  flex justify-center mb-4">
             <h2 className="text-2xl sm:text-4xl text-center font-bold mb-4 text-teal-500 font-serif">
