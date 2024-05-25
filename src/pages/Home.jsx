@@ -4,6 +4,7 @@ import About from "./About";
 import Contact from "./Contact";
 import News from "./News";
 import Staff from "./Staff";
+import PriceSection from "../components/priceSection";
 function Home() {
   return (
     <div>
@@ -37,6 +38,7 @@ function Home() {
         <News showSlide1={false} />
         <Staff showSlide1={false} />
         <Contact showSlide1={false} />
+        <PriceSection />
       </section>
     </div>
   );
