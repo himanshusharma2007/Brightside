@@ -14,6 +14,7 @@ import News from "./pages/News";
 import Gallery from "./pages/Gallery";
 import Staff from "./pages/Staff";
 import Register from "./pages/Register.jsx";
+import PriceSection from "./components/priceSection.jsx";
 function App() {
   return (
     <Router>
@@ -23,6 +24,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About showSlide1={true} />} />
+            <Route path="/pricing" element={<PriceSection showSlide1={true} />} />
             <Route path="/contact" element={<Contact showSlide1={true} />} />
             <Route path="/news" element={<News showSlide1={true} />} />
             <Route path="/gallery" element={<Gallery showSlide1={true} />} />

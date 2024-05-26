@@ -4,7 +4,7 @@ import priceLogo2 from '../assets/priceLogo2.webp'
 import priceLogo3 from '../assets/priceLogo3.webp'
 const PriceSection = () => {
   return (
-    <div className="bg-zinc-100 px-6 sm:px-12 py-8 mb-8 device-screen ">
+    <div className="bg-zinc-100 px-6 sm:px-12 py-2 device-screen ">
       <div className="max-w-7xl mx-auto text-center flex flex-col items-center justify-between">
         <div className="top-head flex flex-col items-center justify-center">
           <div className="text-[35px] w-fit text-teal-500 border-b-2 border-b-teal-500 mb-4 md:mb-2 font-medium ">

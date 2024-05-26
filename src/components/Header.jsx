@@ -80,10 +80,18 @@ const Header = () => {
         <ListItem
           button
           component={Link}
+          to="/pricing"
+          onClick={toggleDrawer(false)}
+        >
+          <ListItemText className="hover:text-teal-500" primary="pricing" />
+        </ListItem>
+        <ListItem
+          button
+          component={Link}
           to="/contact"
           onClick={toggleDrawer(false)}
         >
-          <ListItemText className="hover:text-teal-500"  primary="Contact" />
+          <ListItemText className="hover:text-teal-500" primary="Contact" />
         </ListItem>
       </List>
     </div>
@@ -92,7 +100,7 @@ const Header = () => {
   return (
     <>
       <header className="bg-white shadow sticky top-0 z-40 w-full">
-        <div className="container mx-auto px-4 md:px-6 py-4 flex items-center justify-between">
+        <div className=" mx-auto px-4 md:px-4 lg:px-8 py-4 flex items-center justify-between">
           <div className="font-bold text-2xl text-gray-800">
             <Link to="/">Brightside</Link>
           </div>
@@ -152,6 +160,12 @@ const Header = () => {
                 className="block hover:bg-gray-100 md:inline-block text-gray-800 hover:text-gray-600 py-2 px-4"
               >
                 About
+              </Link>
+              <Link
+                to="/pricing"
+                className="block hover:bg-gray-100 md:inline-block text-gray-800 hover:text-gray-600 py-2 px-4"
+              >
+                Pricing
               </Link>
               <Link
                 to="/contact"

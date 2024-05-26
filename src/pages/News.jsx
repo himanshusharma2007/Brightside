@@ -66,8 +66,8 @@ const News = ({ showSlide1 }) => {
           heading="School News"
         />
       )}
-      <div className="container mx-auto px-8 pt-3 pb-10 device-screen  flex flex-col items-center justify-between ">
-        <div className="text-[35px] text-teal-500 border-b-2 border-b-teal-500 mb-4 md:mb-0 font-medium ">
+      <div className="container mx-auto px-8 pt-3 pb-10 device-screen  flex flex-col items-center justify-between mb-8">
+        <div className="text-[35px] text-teal-500 border-b-2 border-b-teal-500 mb-4 font-medium ">
           News
         </div>
         <div className="grid grid-cols-1  md:grid-cols-2 gap-x-12 gap-y-5  max-h-full ">

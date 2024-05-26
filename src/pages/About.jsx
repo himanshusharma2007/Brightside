@@ -68,14 +68,14 @@ const About = ({ showSlide1 }) => {
                 <h2 className="text-4xl font-bold mb-4 text-teal-500 font-serif slide-in">
                   About Us
                 </h2>
-                <div className="slide-in h-full">
-                  <p className="w-auto flex-wrap">
+                <div className=" h-full">
+                  <p className="w-auto flex-wrap slide-in">
                     Far far away, behind the word mountains, far from the
                     countries Vokalia and Consonantia, there live the blind
                     texts. Separated they live in Bookmarksgrove right at the
                     coast of the Semantics, a large language ocean.
                   </p>
-                  <ul className="list-disc pl-6 mb-6">
+                  <ul className="list-disc pl-6 mb-6 slide-in">
                     <li>Separated they live</li>
                     <li>Bookmarksgrove right at the coast</li>
                     <li>large language ocean</li>
