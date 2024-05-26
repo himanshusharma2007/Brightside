@@ -83,7 +83,7 @@ const Header = () => {
           to="/pricing"
           onClick={toggleDrawer(false)}
         >
-          <ListItemText className="hover:text-teal-500" primary="pricing" />
+          <ListItemText className="hover:text-teal-500" primary="Pricing" />
         </ListItem>
         <ListItem
           button

@@ -23,7 +23,7 @@ const Register = () => {
 
   if (isLoading) {
     return (
-      <div className="device-screen flex items-center justify-center" role="status ">
+      <div className="h-[90vh] flex items-center justify-center" role="status ">
         <svg
           aria-hidden="true"
           className="inline w-12 h-12 text-gray-200 animate-spin dark:text-gray-600 fill-teal-500"
