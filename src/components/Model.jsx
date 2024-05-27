@@ -7,7 +7,7 @@ import React, { useState } from 'react'
    if (!showModal) return null; // Only render if showModal is true
 
    return (
-     <div className="absolute device-screen bg-gray-100 w-full flex items-center justify-center z-10">
+     <div className="absolute h-[88vh] bg-gray-100 w-full flex items-center justify-center z-10">
        <div className="bg-white rounded-lg shadow-lg p-8 max-w-sm">
          <h2 className="text-2xl font-bold mb-4 text-center">{heading}</h2>
          <p className="mb-4 text-center">
