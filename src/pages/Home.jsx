@@ -10,7 +10,7 @@ function Home() {
     <div>
       <section className="hero-section    relative">
         <div>
-          <div className="slide slide1  mx-auto lg:px-[100px] flex items-center justify-center  text-white  bg-red-500">
+          <div className="slide slide1  mx-auto lg:px-[100px] flex items-center justify-center  text-white  ">
             <div className="flex w-full min-h-full   z-10 items-center  px-4 lg:px-4 justify-center text-center lg:justify-start lg:text-left">
               <div className="main anime-div flex flex-col lg:w-[43%] px-2  h-full  ">
                 <h1 className="text-[40px]  font-bold  font-serif">

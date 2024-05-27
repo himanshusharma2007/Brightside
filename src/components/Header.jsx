@@ -49,7 +49,7 @@ const Header = () => {
           component={Link}
           to="/staff"
           onClick={toggleDrawer(false)}
-          className="text-teal-500 bg-red-500"
+          className="text-teal-500 "
         >
           <ListItemText className="hover:text-teal-500" primary="Our Staff" />
         </ListItem>
