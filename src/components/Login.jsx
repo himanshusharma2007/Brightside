@@ -1,35 +1,41 @@
 import React, { useEffect, useState } from "react";
 import {
-  getAuth,
   signInWithEmailAndPassword,
   signInWithPopup,
   GoogleAuthProvider,
 } from "firebase/auth";
-import { useNavigate } from "react-router-dom";
-import { db } from "../config/firebase/firebase";
+import { Link, useNavigate } from "react-router-dom";
+import { db, auth } from "../config/firebase/firebase"; // Updated import
 import { doc, setDoc } from "firebase/firestore";
 import { Google } from "@mui/icons-material";
+import Register from "../pages/Register";
 
 const Login = () => {
+  
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState("");
-  const [showModal, setShowModal] = useState(true);
+  
   const navigate = useNavigate();
-  const auth = getAuth();
   const provider = new GoogleAuthProvider();
-
-  useEffect(() => {
-    console.log(showModal);
-  }, []);
-
+  
+ 
   const handleEmailLogin = async (e) => {
     e.preventDefault();
     try {
-      await signInWithEmailAndPassword(auth, email, password);
+      const result = await signInWithEmailAndPassword(auth, email, password);
+      const user = result.user;
+      const userRef = doc(db, "users", user.uid);
+      await setDoc(userRef, {
+        email: user.email,
+        displayName: user.displayName,
+      });
+    
+    
       navigate("/register");
     } catch (error) {
+      console.error("Error during sign in: ", error);
       setError(error.message);
     }
   };
@@ -43,34 +49,16 @@ const Login = () => {
         email: user.email,
         displayName: user.displayName,
       });
+     
       navigate("/register");
     } catch (error) {
+      console.error("Error during Google sign in: ", error);
       setError(error.message);
     }
   };
 
-  return (
+  return  (
     <div className="h-[90vh] flex flex-col justify-center items-center md:bg-gray-100 relative">
-      {showModal && (
-        <div className="absolute device-screen bg-gray-100 w-full h-full  flex items-center justify-center z-10">
-          <div className="bg-white rounded-lg shadow-lg p-8 max-w-sm">
-            <h2 className="text-2xl font-bold mb-4 text-center">
-              Welcome to Brightside
-            </h2>
-            <p className="mb-4 text-center">
-              For registration, you have to log in first.
-            </p>
-            <div className="flex justify-center">
-              <button
-                className="bg-teal-500 hover:bg-teal-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-teal-500 transition-colors duration-300"
-                onClick={() => setShowModal(false)}
-              >
-                OK
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
       <div className="bg-white rounded-lg md:shadow-lg p-8 w-full max-w-md">
         <div className="text-3xl text-teal-500 border-b-2 border-b-teal-500 mb-6 font-medium">
           Login
@@ -91,7 +79,7 @@ const Login = () => {
               className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-teal-500 transition-colors duration-300"
             />
           </div>
-          <div className="mb-4 relative ">
+          <div className="mb-4 relative">
             <label
               htmlFor="password"
               className="block text-gray-700 font-bold mb-2"
@@ -107,7 +95,7 @@ const Login = () => {
             />
             <button
               type="button"
-              className="absolute  right-0 top-10 px-3 flex items-center text-gray-600 focus:outline-none"
+              className="absolute right-0 top-10 px-3 flex items-center text-gray-600 focus:outline-none"
               onClick={() => setShowPassword(!showPassword)}
             >
               {showPassword ? (
@@ -139,7 +127,7 @@ const Login = () => {
             </button>
           </div>
           {error && <div className="text-red-500 mb-4">{error}</div>}
-          <div className="flex flex-col items-center justify-between w-full space-y-3 mt-4">
+          <div className="flex flex-col items-center justify-between w-full space-y-2 mt-4">
             <button
               type="submit"
               className="bg-teal-500 w-full hover:bg-teal-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-teal-500 transition-colors duration-300"
@@ -159,6 +147,12 @@ const Login = () => {
               <Google className="mr-2" />
               Sign in with Google
             </button>
+            <p className="text-gray-600 text-center">
+              Don't have an account?{" "}
+              <Link to="/signup" className="text-teal-500 font-bold">
+                Sign up
+              </Link>
+            </p>
           </div>
         </form>
       </div>

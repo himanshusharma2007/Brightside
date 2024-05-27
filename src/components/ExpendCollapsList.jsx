@@ -15,20 +15,20 @@ const ExpendCollapsList = () => {
   };
 
   return (
-    <div className="bottom flex flex-col space-y-3">
+    <div className="bottom flex flex-col space-y-2">
       <button
         className="btn w-full h-10 flex items-center px-2"
         onClick={() => handleSectionToggle(0)}
       >
         <div
-          className={`first flex w-full justify-left pl-3  h-10 font-medium items-center space-x-2 sm:space-x-5 ${
+          className={`first flex w-full  pl-3  h-10 font-medium items-center space-x-2 sm:space-x-5 ${
             openSection === 0 ? "bg-teal-500 text-white" : ""
           }`}
         >
-          <div className="pluseLogo">
+          <div className="pluseLogo ">
             {openSection === 0 ? <PiMinusBold /> : <BiPlusMedical />}
           </div>
-          <div className="text text-[13px] sm:text-[18px] w-full">
+          <div className="text text-[13px] sm:text-[18px] w-fit">
             YOUR CHILDRENS ARE SAFE WITH US
           </div>
         </div>

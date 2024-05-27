@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import ExpendCollapsList from "../CommanComponents/ExpendCollapsList";
+import ExpendCollapsList from "../components/ExpendCollapsList";
 import Slide1 from "./slides/Slide1";
 const Contact = ({ showSlide1 }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -47,7 +47,7 @@ const Contact = ({ showSlide1 }) => {
         </div>
         <div className="main">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 p-4">
-            <div>
+            <div className="left">
               <form className="bg-gray-100 p-8 rounded-lg shadow-lg">
                 <div className="mb-4">
                   <input
@@ -203,7 +203,7 @@ const Contact = ({ showSlide1 }) => {
                 </div>
               </div>
             </div>  
-            <div className="expendable-list mt-12 device-screen w-full  bg-gray-100 flex  flex-col justify-center px-5   py-3 shadow-lg">
+            <div className="expendable-list mt-12 device-screen w-full  bg-gray-100 flex  flex-col justify-center px-5   pt-2 pb-6 shadow-lg">
               <div className="main min-h-full">
                 <h2 className="text-3xl font-medium mb-2 text-teal-400">
                   Why Choose Us

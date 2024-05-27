@@ -5,12 +5,15 @@ import { db } from "../config/firebase/firebase"; // Import the db object
 import { collection, addDoc } from "firebase/firestore"; // Import necessary functions
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import Login from "../components/Login";
+import Signup from "../components/Signup";
+import Model from "../components/Model";
 
 const Register = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isAuthenticated, setIsAuthenticated] = React.useState(false);
   const [isLoading, setIsLoading] = React.useState(true);
   const auth = getAuth();
+ 
 
   React.useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
@@ -40,13 +43,21 @@ const Register = () => {
             fill="currentFill"
           />
         </svg>
-        <span className="sr-only">Loading...</span>
+       
       </div>
     );
   }
 
   if (!isAuthenticated) {
-    return <Login />;
+    return (
+      <>
+        <Model
+          heading=" Welcome to Brightside"
+          text=" For registration, you have to Sign up first."
+        />
+        <Signup />
+      </>
+    );
   }
 
   const validationSchema = Yup.object({
@@ -59,7 +70,7 @@ const Register = () => {
     gender: Yup.string().required("Required"),
     parentEmail: Yup.string()
       .email("Invalid email address")
-      .required("Required"),
+      .required("*Required"),
   });
 
   const handleSubmit = async (values, { resetForm, setSubmitting }) => {
@@ -287,21 +298,11 @@ const Register = () => {
       </div>
 
       {isSubmitted && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-          <div className="bg-white rounded-lg p-8 max-w-sm w-full">
-            <h2 className="text-2xl font-bold mb-4">Registration Successful</h2>
-            <p className="mb-4">
-              Thank you for registering. You will receive an email with further
-              details.
-            </p>
-            <button
-              className="bg-teal-500 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-              onClick={() => setIsSubmitted(false)}
-            >
-              Close
-            </button>
-          </div>
-        </div>
+        <Model
+          heading="Registration Successful"
+          text=" Thank you for registering. You will receive an email with further
+              details."
+        />
       )}
     </div>
   );

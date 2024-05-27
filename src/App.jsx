@@ -15,6 +15,8 @@ import Gallery from "./pages/Gallery";
 import Staff from "./pages/Staff";
 import Register from "./pages/Register.jsx";
 import PriceSection from "./components/priceSection.jsx";
+import Login from "./components/Login";
+import Signup from "./components/Signup.jsx";
 function App() {
   return (
     <Router>
@@ -24,12 +26,17 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About showSlide1={true} />} />
-            <Route path="/pricing" element={<PriceSection showSlide1={true} />} />
+            <Route
+              path="/pricing"
+              element={<PriceSection showSlide1={true} />}
+            />
             <Route path="/contact" element={<Contact showSlide1={true} />} />
             <Route path="/news" element={<News showSlide1={true} />} />
             <Route path="/gallery" element={<Gallery showSlide1={true} />} />
             <Route path="/staff" element={<Staff showSlide1={true} />} />
             <Route path="/register" element={<Register />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
             {/* Add more routes for other pages */}
           </Routes>
         </main>
