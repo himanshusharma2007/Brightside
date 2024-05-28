@@ -16,10 +16,10 @@ function Home() {
                 <h1 className="text-[40px]  font-bold  font-serif">
                   Learning Center for Your Kids
                 </h1>
-                <div className="relative mb-6">
+                <div className="relative mb-4 sm:mb-6">
                   <div className="absolute inset-0 flex flex-col items-center justify-center"></div>
                 </div>
-                <p className=" mb-8 text-lg">
+                <p className="mb-4 sm:mb-8 text-lg">
                   "Every day is a new beginning, A chance to embrace the
                   Brightside. Where learning blooms and dreams take flight,
                   Brightside guides young minds to shine bright."

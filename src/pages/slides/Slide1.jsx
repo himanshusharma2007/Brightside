@@ -13,7 +13,7 @@ const Slide1 = ({ para, heading, styleSlide1 }) => {
               {heading}
             </h1>
 
-            <p className=" mb-8">{para}</p>
+            <p className="mb-8">{para}</p>
             <div className="flex  space-x-4  justify-center ">
               <button className="bg-teal-700 text-white px-6 py-3 rounded-full hover:bg-teal-600 cursor-pointer">
                 EXPLORE NOW
