@@ -10,10 +10,9 @@ import Model from "../components/Model";
 
 const Register = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [isAuthenticated, setIsAuthenticated] = React.useState(false);
-  const [isLoading, setIsLoading] = React.useState(true);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const auth = getAuth();
- 
 
   React.useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
@@ -43,7 +42,6 @@ const Register = () => {
             fill="currentFill"
           />
         </svg>
-       
       </div>
     );
   }
@@ -297,13 +295,17 @@ const Register = () => {
         </Formik>
       </div>
 
-      {isSubmitted && (
-        <Model
-          heading="Registration Successful"
-          text=" Thank you for registering. You will receive an email with further
+      {isSubmitted &&
+       
+          <Model
+            styles={{
+              backgroundColor: "transparent",
+            }}
+            heading="Registration Successful"
+            text=" Thank you for registering. You will receive an email with further
               details."
-        />
-      )}
+          />}
+     
     </div>
   );
 };
